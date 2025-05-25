@@ -250,3 +250,43 @@ body {
         text-align: center; /* Align text to the center */
       }
   }
+/* 1) Make the container a fixed size and center the icon inside it */
+.cart-icon-container {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;      /* increase from ~2rem */
+    height: 3.5rem;     /* increase from ~2rem */
+    margin-right: 1.5rem;
+    cursor: pointer;
+
+    /* optional: give it a background circle to stand out */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+/* 2) Scale up the SVG itself to fill the container */
+.cart-icon {
+    width: 2.5rem;      /* bump up from 32px */
+    height: 2.5rem;
+    fill: white;        /* if your SVG uses currentColor you can recolor it */
+}
+
+/* 3) Style the badge so it’s still on the corner */
+.cart-count {
+    position: absolute;
+    top: 2px;           /* adjust so it sits nicely on the larger icon */
+    right: 2px;
+    background: #E53935;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 50%;
+    text-align: center;
+    pointer-events: none;
+}
