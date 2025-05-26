@@ -256,11 +256,16 @@ function ProductList({ onHomeClick }) {
         setShowPlants(true); // Set showAboutUs to true when "About Us" link is clicked
         setShowCart(false); // Hide the cart when navigating to About Us
     };
-
+    const handleContinueShopping = () => {
+        setShowCart(false);
+    };
+    /*
     const handleContinueShopping = (e) => {
         e.preventDefault();
         setShowCart(false);
     };
+    */
+
     const handleAddToCart = (product) => {
         dispatch(addItem(product)); // Dispatch the action to add the product to the cart (Redux action)
         setAddedToCart((prevState) => ({ // Update the local state to reflect that the product has been added

@@ -32,7 +32,7 @@ const CartItem = ({ onContinueShopping }) => {
     /** Calls the parent’s callback to hide the cart and go back to shopping */
     const handleContinueShopping = (e) => {
         e.preventDefault();
-        if (onContinueShopping) onContinueShopping();
+        if (onContinueShopping) onContinueShopping(e);
     };
 
     /** Increase quantity by 1 and dispatch an updateQuantity action */
